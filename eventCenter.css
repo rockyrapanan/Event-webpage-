@@ -1,0 +1,256 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://wieck-nissanao-production.s3.amazonaws.com/photos/6d7ad898a991a65f1dbbf9d22fc8f9c373129c43/preview-928x522.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    background-attachment: fixed;
+}
+
+/* Event Center title*/
+.title {
+    font-family: "Saira Stencil One", sans-serif;
+    font-style: oblique;
+    font-size: 3 rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: skewX(-10deg);
+    text-align: center;
+}
+nav {
+    background-color: #f8f8f8; /* Optional: Set a background color */
+    padding: 10px; /* Optional: Some padding around the nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    display: flex; /* Set the list to display as flexbox */
+    justify-content: space-evenly; /* Evenly space items */
+}
+
+nav ul li {
+    display: inline-block; /* Set the list items to display inline */
+    margin-right: 20px; /* Optional: Spacing between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+.search-container button {
+    padding: 5px 10px; /* Button padding */
+    margin-left: 5px; /* Space between the input field and button */
+    border: none; /* No border */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+@media (max-width: 480px) {
+    
+    body {
+        background-size: contain; /* Ensures the entire image is visible */
+        background-position: center top; /* Centers and aligns the image to the top */
+        background-attachment: scroll; /* Allows scrolling for better performance */
+        background-repeat: none; /* Prevents the image from repeating */
+    }
+}
+
+@media (max-width: 110px) {
+   
+    body {
+        background-size: 150%; /* Zooms in slightly for smaller screens */
+        background-position: top; /* Aligns image to the top */
+        background-repeat: no-repeat; /* Prevents repeating */
+        height: 100%; /* Ensures it scales properly */
+    }
+}
+/* Images 480 width and smaller creates verticle line.*/
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Less margin for a more compact layout */
+    }
+}
+/* Event Center.html*/
+.gallery {
+    display: flex; /* Enable Flexbox layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px; /* Margin around the gallery */
+}
+
+.gallery img {
+    width: 300px; /* Set a uniform width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 15px; /* Space around images */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow around images */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+/* Shop.html*/
+.shopping-menu {
+    width: 300px; /* Set a width for the menu */
+    margin: 50px auto; /* Center the menu */
+    padding: 20px; /* Padding inside the menu */
+    background-color: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.shopping-menu h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.shopping-menu ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.shopping-menu ul > li {
+    position: relative; /* Positioning for dropdown */
+    margin-bottom: 10px; /* Space between menu items */
+}
+
+.shopping-menu ul li a {
+    display: block; /* Make the link fill the list item */
+    padding: 10px; /* Padding inside the link */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.shopping-menu ul li a:hover {
+    background-color: #007BFF; /* Blue background on hover */
+    color: white; /* Change text color on hover */
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position dropdown */
+    left: 100%; /* Align dropdown to the right of the parent */
+    top: 0; /* Align with top of the parent */
+    min-width: 150px; /* Minimum width for dropdown */
+    background-color: white; /* Dropdown background */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+    z-index: 1; /* Ensure dropdown is above other elements */
+}
+
+.shopping-menu ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    margin: 0; /* Remove margin in dropdown */
+}
+
+.dropdown li a {
+    padding: 10px; /* Padding inside dropdown links */
+}
+/* about.html*/
+.about-us {
+    border: 2px solid #007BFF; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the border */
+    margin-top: 150px; /* Margin around the About Us section */
+    background: rgb(201, 199, 199); /* Light gray background */
+}
+
+.about-us h2 {
+    text-align: center; /* Center the heading */
+    color: #141414; /* Darker color for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.about-us p {
+    font-size: 30px; /* Font size for the paragraph */
+    line-height: 1.5; /* Line height for readability */
+    color: #0f0f0f; /* Dark gray color for the text */
+    
+}
+/* contact.html*/
+.contact-container {
+    max-width: 800px; /* Set maximum width for container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow around the container */
+}
+
+.contact-info,
+.social-media,
+.feedback-section {
+    margin-bottom: 20px; /* Space below each section */
+}
+
+h2, h3 {
+    color: #007BFF; /* Blue color for headings */
+}
+
+.contact-info ul, 
+.social-media ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.contact-info li,
+.social-media li {
+    padding: 5px 0; /* Padding between list items */
+}
+
+.feedback-section textarea {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 10px; /* Margin above textarea */
+    resize: none; /* Disable resizing */
+}
+
+.feedback-button {
+    display: block; /* Make the button a block element */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the button */
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Space above the button */
+}
+
+.feedback-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
